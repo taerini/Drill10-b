@@ -34,9 +34,6 @@ class Ball:
     def draw(self):
             self.image.draw(self.x,self.y)
 
-    
-        
-
 
 
 def handle_events():
@@ -64,6 +61,10 @@ def reset_world():
     global team
     team=[Boy() for i in range(50)]
     world+=team
+
+    global ball
+    ball=Ball()
+    world.append(ball)
 
    
    
