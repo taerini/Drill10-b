@@ -63,8 +63,8 @@ def reset_world():
     world+=team
 
     global ball
-    ball=Ball()
-    world.append(ball)
+    balls=[Ball() for i in range(20)]
+    world+=balls
 
    
    
