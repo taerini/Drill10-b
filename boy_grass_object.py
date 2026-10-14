@@ -24,6 +24,11 @@ class Boy:
         self.image.clip_draw(self.frame*100, 0, 100, 100, self.x, self.y)
 
 class Ball:
+   def __init__(self):
+           self.x, self.y=random.randint(100, 700), 90
+           self.image=load_image('ball21x21.png')
+          
+   
    pass
 
 
