@@ -31,6 +31,9 @@ class Ball:
     def update(self):
             self.y+=random.randint(3,10)
 
+    def draw(self):
+            self.image.draw(self.x,self.y)
+
     
         
 
