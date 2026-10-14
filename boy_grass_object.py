@@ -24,27 +24,55 @@ class Boy:
         self.image.clip_draw(self.frame*100, 0, 100, 100, self.x, self.y)
 
 class Ball1:
+    
     def __init__(self):
-           self.x, self.y=random.randint(100, 700), 90
+           
+           self.x, self.y=random.randint(20, 800), 90
            self.image=load_image('ball21x21.png')
            self.speed=random.randint(1,20)
+           self.dir=1
            
 
     def update(self):
-            self.y+=self.speed
+            if self.dir==1 and self.y<550 :
+                self.y+=self.speed
+                self.dir=1
+            elif self.dir==1 and self.y>=550:
+                 self.y-=self.speed
+                 self.dir=-1
+            elif self.dir==-1 and self.y<550 and self.y>300:
+                 self.y-=self.speed
+                 self.dir=-1
+            elif self.dir==-1 and self.y<=300:
+                 self.y+=self.speed
+                 self.dir=1
+                 
+
 
     def draw(self):
             self.image.draw(self.x,self.y)
 
 class Ball2:
     def __init__(self):
-           self.x, self.y=random.randint(100, 700), 90
+           self.x, self.y=random.randint(20, 800), 90
            self.image=load_image('ball41x41.png')
            self.speed=random.randint(1,20)
+           self.dir=1
            
 
     def update(self):
-            self.y+=self.speed
+             if self.dir==1 and self.y<550 :
+                self.y+=self.speed
+                self.dir=1
+             elif self.dir==1 and self.y>=550:
+                self.y-=self.speed
+                self.dir=-1
+             elif self.dir==-1 and self.y<550 and self.y>300:
+                self.y-=self.speed
+                self.dir=-1
+             elif self.dir==-1 and self.y<=300:
+                self.y+=self.speed
+                self.dir=1
 
     def draw(self):
             self.image.draw(self.x,self.y)
